@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "FoxFortress",
+  "version": "1.0",
+
+  "description": "Allows to open AWS consoles in new containers",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://fortress.auslr.io/console*", "*://fortress.auslr.io/accounts*"],
+      "js": ["fortressify.js"]
+    }
+  ]
+
+}
