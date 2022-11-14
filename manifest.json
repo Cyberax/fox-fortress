@@ -10,11 +10,18 @@
     "48": "icons/border-48.png"
   },
 
-  "content_scripts": [
+  "permissions": ["contextualIdentities", "cookies", "notifications"],
+
+  "content_scripts": [	  
     {
-      "matches": ["*://fortress.auslr.io/console*", "*://fortress.auslr.io/accounts*"],
+      "matches": ["*://fortress.auslr.io/console*"],
       "js": ["fortressify.js"]
     }
-  ]
+  ],
+
+  "background": {
+     "scripts": ["opener.js"],
+     "persistent": false
+  }
 
 }
