@@ -28,11 +28,7 @@ async function notify(message, sender) {
 				color = "orange";
 			}
 		} else {
-			if (radioactive) {
-				color = "yellow";
-			} else {
-				color = "green";
-			}
+			color = "green";
 		}
 
 		store = await browser.contextualIdentities.create({
